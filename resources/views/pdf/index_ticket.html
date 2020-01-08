@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head> 
+    <title>Ticket</title>
+    <style>
+        .container{
+            padding: 10px;
+            /* width: auto;   */
+        }
+        h1,h2{
+            margin: 0; padding: 0;
+        }
+        html{margin: 15px; margin-top: 25px; }
+        p{padding: 0;margin: 0;}
+        hr{padding: 0; margin-top: 8px;margin-bottom: 8px; margin-left: 0;margin-right: 0;  }
+        *,*::before,*::after{ box-sizing: border-box;}
+        body{  
+            padding: 0;margin: 0;
+            font-family:Tahoma, Geneva, sans-serif; font-size:12px
+        }.dash{
+            border: 0 none;
+            border-top: 1px dashed black;
+            background: none;
+            height:0;
+            }
+        .center{
+            text-align: center;
+        }strong{
+            font-size:14px
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="center">
+            <img src="{{logo}}" width="90px" >
+            <!-- <p>RUC: {{ruc}}</p> -->
+        </div>
+        <br>
+        <div class="center">
+            <p>{{direccion}}</p>
+            <p>Telefono: {{telefono}}</p>
+            <p>Email: {{email}}</p>
+        </div>
+        <hr class="dash" width="100%" >
+ 
+        <div class="center">
+            <strong style="text-transform: uppercase;">{{tipo_doc}}</strong><br>
+            <strong>{{serie_numero}}</strong>
+            <p>Fecha de Emisión: {{fecha_emision}}</p>
+            <p>Cliente : {{cliente}}</p>
+            <p>N° DNI : {{num_doc_cliente}}</p>
+            <p>Direc: {{direccion_cliente}}</p>
+        </div>
+        <hr class="dash"  width="100%" >
+
+        <table style="width:100%">
+            <thead >
+                <tr  >
+                    <td width="42%" >Descripción</td>
+                    <td width="25%" class="center">Precio</td>
+                    <td width="8%" >Cant.</td>
+                    <td width="25%" class="center">Importe</td>
+                </tr>
+            </thead> 
+        </table>
+        <hr class="dash"  width="100%" >
+        <table style="width:100%">
+            <tbody>
+               {{productos}}
+            </tbody>
+        </table>
+        <hr class="dash"  width="100%" >
+        <div style="text-align: right;" >
+            <p>Gravada : {{gravada}}</p>
+            <p>IGV (18%) : {{igv}}</p>
+            <p>Descuento Total: {{descuento}}</p>
+            <p>Total: {{total_pagar}}</p>
+        </div>
+        <hr class="dash"  width="100%" >
+        <p>Importe en letras: {{texto_total}}</p> <br><br>
+        <div class="center">
+            <img src="{{code_qr}}"  >
+        </div>
+        <div class="center">
+            <!-- <p>Gravada : {{gravada}}</p> -->
+            <!-- <h2>Total: {{gravada}}</h2> -->
+            Electrónica
+            <p>Representación Impresa de la {{comprobante}} </p> 
+            <p>HASH: {{code_hash}}</p>
+            <p>VENDEDOR: {{vendedor}}</p> 
+        </div>
+        <!-- <br> -->
+        <hr class="dash"  width="100%" >
+        <div class="center">
+            <b style="font-size: 16px;"> ¡Gracias por su Compra!</strong>
+        </div>
+
+        <hr class="dash"  width="100%" >
+
+    </div>
+
+</body>
+</html>
