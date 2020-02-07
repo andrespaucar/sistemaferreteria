@@ -2,7 +2,7 @@
 Desarrollado en PHP , MYSQL y VUEJS
  
 - PDF  
-- TICKET - 
+- TICKET
 - QR 
 - API DNI Y RUC 
 - REPORTES 
